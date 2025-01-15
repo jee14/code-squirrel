@@ -1,4 +1,4 @@
-package com.aroa.swagger
+package com.aroa
 
 import org.springframework.context.annotation.Configuration
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry

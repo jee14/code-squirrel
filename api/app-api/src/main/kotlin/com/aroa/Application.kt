@@ -1,4 +1,4 @@
-package com.aroa.appapi
+package com.aroa
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
