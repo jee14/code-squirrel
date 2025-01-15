@@ -7,6 +7,7 @@ ktlint = "3.16.0"
 spring_boot = "3.4.1"
 spring_dependency_management = "1.1.7"
 spring_cloud_dependencies = "2024.0.0"
+spring_ai = "1.0.0-M5"
 
 # External version
 spring_mockk = "4.0.2"
@@ -59,6 +60,8 @@ spring_boot_starter_actuator = { module = "org.springframework.boot:spring-boot-
 spring_boot_starter_aop = { module = "org.springframework.boot:spring-boot-starter-aop", version.ref = "spring_boot" }
 spring_boot_configuration_processor = { module = "org.springframework.boot:spring-boot-configuration-processor", version.ref = "spring_boot" }
 spring_boot_starter_test = { module = "org.springframework.boot:spring-boot-starter-test", version.ref = "spring_boot" }
+spring_ai_bom = { module = "org.springframework.ai:spring-ai-bom", version.ref = "spring_ai" }
+spring_ai_openai = { module = "org.springframework.ai:spring-ai-openai" }
 spring_restdocs_mockmvc = { module = "org.springframework.restdocs:spring-restdocs-mockmvc" }
 spring_restdocs_restassured = { module = "org.springframework.restdocs:spring-restdocs-restassured" }
 spring_doc_openapi_starter_webmvc_ui = { module = "org.springdoc:springdoc-openapi-starter-webmvc-ui", version.ref = "swaggerVersion" }
