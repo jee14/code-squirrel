@@ -1,6 +1,9 @@
-package com.aroa.controller
+package com.aroa.controller.review
 
+import com.aroa.controller.review.request.ReviewRequest
+import com.aroa.controller.review.response.ReviewResponse
 import com.aroa.review.service.ReviewService
+import com.aroa.support.response.ApiResponse
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RequestMapping
@@ -13,8 +16,9 @@ class ReviewController(
 ) {
     @PostMapping
     fun review(
-        @RequestBody code: String,
-    ): String {
-        return reviewService.review(code)
+        @RequestBody request: ReviewRequest,
+    ): ApiResponse<ReviewResponse> {
+        val message = reviewService.review(request.toCode())
+        return ApiResponse.success(ReviewResponse(message))
     }
 }
