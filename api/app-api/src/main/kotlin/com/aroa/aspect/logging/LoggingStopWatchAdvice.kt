@@ -19,10 +19,10 @@ class LoggingStopWatchAdvice {
 
     @Around("execution(* com.aroa.controller..*Controller.*(..))")
     fun stopWatchTarget(joinPoint: ProceedingJoinPoint): Any? {
-        val startAt = System.currentTimeMillis()
+        val startedAt = System.currentTimeMillis()
         val proceed = joinPoint.proceed()
-        val endAt = System.currentTimeMillis()
-        val timeMs = (endAt - startAt)
+        val endedAt = System.currentTimeMillis()
+        val timeMs = (endedAt - startedAt)
 
         val className = joinPoint.signature.declaringType.simpleName
         val methodName = joinPoint.signature.name
